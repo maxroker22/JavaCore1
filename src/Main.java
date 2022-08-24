@@ -4,7 +4,10 @@ public class Main {
         int a = calc.plus.apply(1, 2);
         int b = calc.minus.apply(1, 1);
         int c = calc.devide.apply(a, b);
-        calc.println.accept(c);
+        if (calc.devide.apply(a, b) == 0) {
+            System.out.println("Делить на ноль нельзя");
+        } else {
+            calc.println.accept(c);
+        }
     }
 }
-//ошибка возникает из-за деления на ноль(calc.minus = 1-1=0)! в переменной abs прописано условие при которой всегда возникает деление на ноль.
